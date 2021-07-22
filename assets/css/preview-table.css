@@ -1,0 +1,127 @@
+#preview-table{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+	z-index: 1000;
+	overflow: auto;
+}
+#preview-table.active{
+	display: block;
+}
+#back-preview{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	border-radius: 100%;
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+#back-preview:hover{
+	border-color: #00FFD2;
+}
+#preview-table .pt-wrapper{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 60px;
+}
+#preview-table .pt-table-place,
+#preview-table .pt-form-place{
+	display: block;
+	max-width: 90%;
+	margin: 20px;
+	padding: 15px;
+	padding-top: 0;
+	border: 1px solid #00FFD2;
+}
+#preview-table .pt-form-place{
+	width: 400px;	
+}
+#preview-table .pt-title{
+	display: block;
+	padding: 10px 15px 10px 0;
+}
+#preview-table .pt-title .text{
+	font-size: 20px;
+	font-weight: bold;
+}
+#preview-table .table-place{
+	display: block;
+	width: 90%;
+	overflow: auto;
+	margin: 5px auto;
+}
+#preview-table .table-place table{
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+#preview-table .table-place table td,
+#preview-table .table-place table th{
+	padding: 7px 13px;
+	border: 1px solid #00FFD2;
+}
+#preview-table .table-place table tr:hover{
+	background-color: #CFF3F0;
+}
+#preview-table .table-place table tr:first-child{
+	background-color: #00FFD2;
+}
+#preview-table .title-place{
+	display: block;
+	margin: 10px;
+}
+#preview-table .title-place .text{
+	font-size: 18px;
+	font-weight: bold;
+}
+#preview-table .input-place{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+#preview-table .check-place{
+	margin: 10px;
+}
+#preview-table .check-place .checkbox,
+#preview-table .check-place span{
+	float: left;
+}
+#preview-table .check-place .checkbox{
+	margin-top: 4px;
+}
+#preview-table .check-place span{
+	margin-left: 11px;
+}
+#preview-table .input-place input,
+#preview-table .input-place textarea{
+	display: block;
+	width: 250px;
+	max-width: 90%;
+	outline: none;
+	border: 2px solid #00FFD2;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 17px;
+}
+#preview-table .input-place input{
+	height: 35px;
+}
+#preview-table .input-place textarea{
+	height: 120px;
+	resize: none;
+}
+#preview-table .input-place input:hover,
+#preview-table .input-place input:focus,
+#preview-table .input-place textarea:hover,
+#preview-table .input-place textarea:focus{
+	border-color: #0DBFA0;
+}

@@ -1,0 +1,34 @@
+.checkbox{
+	display: block;
+	width: 35px;
+	height: 15px;
+	border-radius: 15px;
+	position: relative;
+	cursor: pointer;
+	background-color: #97FFEC;
+}
+.checkbox input{
+	display: none!important;
+}
+.check-item{
+	display: block;
+	width: 21px;
+	height: 21px;
+	border-radius: 100%;
+	position: relative;
+	left: -3px;
+	top: -3px;
+	transition: 100ms ease-in-out;
+	border: 2px solid #fff;
+	background-color: #0DBFA0;
+}
+.checkbox input:checked ~ .check-item{
+	left: 18px;
+	background-color: #212E40;
+}
+
+
+/*<label class="checkbox">
+	<input type="radio" name="select-table">
+	<div class="check-item"></div>
+</label>*/

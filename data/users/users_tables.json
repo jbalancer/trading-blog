@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "table_id": 7,
+        "table_path": "../../data/tables/content/c588575f4ff476f964c5608e0d7b8395.json"
+    },
+    {
+        "id": 1,
+        "table_id": 8,
+        "table_path": "../../data/tables/content/606100a854a918f1606ed6c67feb1547.json"
+    },
+    {
+        "id": 2,
+        "table_id": 1,
+        "table_path": "../../data/tables/content/b4b85d1db210f714d4c4e23cc3c55021.json"
+    },
+    {
+        "id": 3,
+        "table_id": 2,
+        "table_path": "../../data/tables/content/fb4fada771dfe297aa03dfe45980d25f.json"
+    },
+    {
+        "id": 3,
+        "table_id": 3,
+        "table_path": "../../data/tables/content/4dbb5d5dc28e2d7c974f8d66a8b3af04.json"
+    }
+]

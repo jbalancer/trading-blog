@@ -1,0 +1,391 @@
+ --- Вывод всех таблиц --- */
+#view-tables{
+	display: none;
+	width: 100%;
+}
+.vt-wrapper{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 0 10px;
+}
+.vt-item{
+	display: block;
+	width: 280px;
+	border: 2px solid #97FFEC;
+	margin: 40px 20px;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.vt-item:hover{
+	box-shadow: 0 0 10px #CFF3F0;
+}
+.vt-title{
+	display: block;
+	width: 100%;
+	padding: 8px 10px 10px 10px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #CFF3F0;
+	color: #212E40;
+}
+.vt-date{
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+}
+.vt-content{
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	border-top: 1px solid #97FFEC;
+}
+.vt-text{
+	display: block;
+	width: 100%;
+	border-bottom: 1px dashed #00FFD2;
+	padding: 5px;
+	text-align: center;
+}
+.vt-text:hover{
+	border-bottom-color: #0B7D72;
+}
+.vt-text:first-child{
+	padding-top: 0;
+}
+.vt-select{
+	display: block;
+	width: 100%;
+}
+.vt-sup{
+	padding: 40px 0;
+}
+.vt-sup .vt-item:first-child{
+	margin-top: 0;
+}
+.vt-sup .vt-item:last-child{
+	margin-bottom: 0;
+}
+.ts-btns{
+	display: none;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.ts-btns.active{
+	display: flex;
+}
+.ts-btn-item,
+.vt-options{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-color: #CFF3F0;
+	margin: 5px;
+	cursor: pointer;
+}
+.vt-options{
+	margin: 5px auto 15px auto;
+}
+.vt-options.active{
+	display: none;
+}
+.vt-options.active ~ .ts-btns{
+	display: flex;
+}
+.ts-btn-item i,
+.vt-options i{
+	font-size: 19px;
+}
+.ts-btn-item:hover,
+.vt-options:hover{
+	background-color: #b6c1d1;
+    background-image: linear-gradient(to right,rgb(193, 212, 197) 0%,rgb(171, 173, 220) 100%);
+}
+/* --- Вывод таблицы --- */
+#show-table,
+.show-wrapper,
+.show-date{
+	display: block;
+	width: 100%;
+}
+#show-table{
+	display: none;
+}
+.show-title{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 10px 0 10px;
+}
+#show-table .show-title .icon-place{
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+#show-table .show-title .icon-place i{
+	font-size: 24px;
+}
+#show-table .show-title .title-text,
+#show-table .show-title .text{
+	font-size: 20px;
+	margin: 7px 0 0 10px;
+}
+#show-table .show-title .text{
+	font-weight: bold;
+}
+.show-date{
+	padding-left: 50px;
+	margin: 0 10px 10px 10px;
+}
+#show-table .show-date .date-text{
+	color: #0B7D72;
+	margin-left: 5px;
+}
+.show-content{
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+	overflow: auto;
+}
+.table-place{
+	display: block;
+	width: 100%;
+	margin-bottom: 2px;
+}
+.show-content table{
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+.show-content th,
+.show-content td{
+	border: 1px solid #97FFEC;
+	text-align: center;
+}
+.show-content .text{
+	display: block;
+	margin: 7px 13px;
+}
+.show-content tr:first-child{
+	background-color: #97FFEC;
+}
+.show-content tr:hover{
+	background-color: #CFF3F0;
+}
+.show-content tr:first-child:hover{
+	background-color: #97FFEC;
+}
+/* --- Редактирование таблицы --- */
+#show-table.edit-table .title-text,
+#show-table .edit-icon,
+#show-table .edit-title,
+#show-table.edit-table .icons{
+	display: none;
+}
+.edit-go{
+	display: none;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 10px;
+	margin-top: 0;
+}
+#show-table.edit-table .edit-go{
+	display: flex;
+}
+.eg-item{
+	padding: 7px 13px;
+	border-radius: 3px;
+	margin: 10px;
+	cursor: pointer;
+	margin-top: 0;
+	border: 2px solid transparent;
+}
+.eg-item *::selection{
+	background-color: transparent;
+}
+.eg-item.back{
+	border-color: #CFF3F0;
+}
+.eg-item.go{
+	background-color: #CFF3F0;
+}
+.eg-item:hover{
+	border-color: #00FFD2;
+}
+#show-table.edit-table .title-text.edit-title{
+	display: block;
+}
+#show-table.edit-table .edit-icon{
+	display: inline;
+}
+#show-table.edit-table .cell.active{
+	outline: 1px solid #0B7D72;
+	outline-offset: -1px;
+}
+#show-table.edit-table .cell.active input{
+	display: block;
+	font-size: 17px;
+	padding: 5px;
+	border: none;
+	outline: none;
+	text-align: center;
+	background-color: transparent;
+}
+/* --- Общие стили --- */
+.title-place{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+	margin-bottom: 0;
+}
+.title-place .icon-place{
+	display: block;
+	width: 45px;
+	height: 45px;
+}
+.title-place .title-text,
+.title-place .text{
+	margin-top: 10px;
+	margin-left: 7px;
+}
+.title-place{
+	font-size: 19px;
+}
+.title-place .icon-place i{
+	font-size: 24px;
+}
+.date-place{
+	display: block;
+	margin: 10px;
+	padding-left: 52px;
+	margin-top: 0;
+}
+.date-place .date-text{
+	margin-left: 2px;
+	color: #0B7D72;
+}
+.content{
+	display: block;
+	width: 400px;
+	max-width: 90%;
+	margin: 10px auto;
+}
+.data-place{
+	display: block;
+	width: 100%;
+}
+.new-row-item{
+	display: block;
+	width: 100%;
+	padding: 5px;
+}
+.content .title,
+.content .input-place{
+	display: block;
+	margin: 5px;
+}
+.content .title .text{
+	font-size: 18px;
+	font-weight: bold;
+}
+.content .input-place{
+	margin-top: 10px;
+}
+.content .input-place > input,
+.content .input-place > textarea{
+	display: block;
+	width: 100%;
+	height: 40px;
+	background-color: transparent;
+	font-size: 17px;
+	padding: 12px;
+	outline: none;
+	border: 2px solid #97FFEC;
+	border-radius: 3px;
+}
+.content .input-place > input:focus,
+.content .input-place > input:hover,
+.content .input-place > textarea:focus,
+.content .input-place > textarea:hover{
+	border-color: #0DBFA0;
+}
+.content .input-place > textarea{
+	height: 150px;
+	resize: none;
+}
+.btns-place{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.btn-item{
+	display: block;
+	padding: 7px 13px;
+	border-radius: 3px;
+	margin: 10px;
+	border: 2px solid transparent;
+	cursor: pointer;
+}
+.btn-item.no-bg{
+	border-color: #97FFEC;
+}
+.btn-item.no-br{
+	background-color: #97FFEC;
+}
+.btn-item:hover{
+	border-color: #28D0C5;
+}
+.btn-item *::selection{
+	background-color: transparent;
+}
+/* --- Чекбокс --- */
+.select-content{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.select-item{
+	display: block;
+	padding: 5px;
+	margin: 5px;
+}
+.select-item .checkbox,
+.select-item .check-text{
+	float: left;
+	margin: 0 5px;
+}
+.select-item .checkbox{
+	margin-top: 3px;
+}
+/* --- Список --- */
+.content .input-place .select{
+	margin: 10px auto;
+}
+/* --- Запись в таблицу --- */
+/* --- Шифрование таблицы --- */
+#add-table-row,
+#lock-table,
+#show-table.edit-table .btns-place{
+	display: none;
+}
+#show-table .btns-place{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#show-table .btn-item{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	border: 2px solid transparent;
+	cursor: pointer;
+}
+#show-table .btn-item:hover{
+	border-color: #00FFD2;
+}

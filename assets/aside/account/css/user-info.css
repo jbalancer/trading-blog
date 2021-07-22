@@ -1,0 +1,153 @@
+#user-info,
+#user-info .ui-wrapper{
+	display: block;
+	width: 100%;
+}
+#user-info .ui-wrapper{
+	position: relative;
+}
+#user-info .ui-bg{
+	display: block;
+	width: 100%;
+	height: 182px;	
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -2;
+}
+#user-info .ui-bg.no-img{
+	z-index: -1;
+    background-color: rgba(17, 23, 32, 0.1);
+    background-image: linear-gradient(to bottom,rgba(33, 46, 64, .8) 0%,rgba(0, 0, 0, 0) 100%);
+}
+#user-info .ui-title{
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 10px 20px;
+	font-size: 21px;
+	font-weight: bold;
+	color: #CFF3F0;
+}
+#user-info .ui-menu{
+	display: flex;
+	justify-content: space-between;
+	width: 610px;
+	height: 110px;
+/* !-! margin-top .ui-logo +2 !-! */
+	margin: 80px auto 0 auto;
+	border-radius: 3px;
+	box-shadow: 0 3px 3px #CFF3F0;
+	background-color: #fff;
+}
+#user-info .uim-sub{
+	display: flex;
+	justify-content: center;
+}
+#user-info .uiml-item{
+	display: block;
+	width: 100px;
+	height: 100%;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 3px;
+	margin: 10px;
+}
+#user-info .uiml-item:nth-child(even){
+	margin-left: 0;
+}
+#user-info .uiml-item .icon-place{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;	
+	margin: 10px auto;
+}
+#user-info .uiml-item .icon-place i{
+	font-size: 19px;
+}
+#user-info .uiml-item.active .icon-place{
+	background-color: #b6c1d1;
+    background-image: linear-gradient(to right,rgb(193, 212, 197) 0%,rgb(171, 173, 220) 100%);
+}
+#user-info .uiml-item .text-place{
+	text-align: center;
+	font-size: 16px;
+	margin: 10px;
+	margin-top: 0;
+}
+#user-info .uiml-item .text-place span::selection{
+	background-color: transparent;
+}
+#user-info .uiml-item:hover{
+	background-color: #CFF3F0;
+}
+#user-info .uiml-item:hover .icon-place{
+	background-color: #97FFEC;
+	box-shadow: 0 1px 2px #28D0C5;
+}
+#user-info .ui-logo,
+#user-info .ui-min-logo{
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin-top: -78px;
+	overflow: hidden;
+}
+#user-info .ui-photo{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	cursor: pointer;
+	border: 10px solid #fff;
+}
+#user-info .uiml-item.active{
+	cursor: default;
+}
+#user-info .uiml-item.active:hover{
+	background-color: transparent;
+}
+#user-info .uiml-item.active:hover .icon-place{
+	box-shadow: none;
+}
+#user-info .ui-min-logo{
+	display: none;
+	margin: 2px auto;
+}
+@media screen and (max-width: 709px){
+	#user-info .ui-logo{
+		display: none;
+	}
+	#user-info .ui-min-logo{
+		display: block;
+	}
+	#user-info .ui-menu{
+		width: 450px;
+		margin: 0 auto;
+		justify-content: center;
+		box-shadow: none;
+	}
+	#user-info .uim-right .uiml-item:first-child{
+		margin-left: 0;
+	}
+	#user-info .ui-bg{
+		height: 123px;
+	}
+}
+@media screen and (max-width: 499px){
+	#user-info .ui-menu{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	#user-info .ui-menu .uim-sub .uiml-item{
+		margin: 0 10px;
+	}
+	#user-info .ui-menu .uim-sub .uiml-item:nth-child(even){
+		margin-left: 0;
+	}
+	#user-info .ui-menu .uim-left{
+		margin: 10px 0;
+	}
+}

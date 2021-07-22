@@ -1,0 +1,120 @@
+/* --- Курсор --- */
+.menu-button,
+.input-button,
+.menu-imbtn{
+	cursor: pointer;
+}
+/* --- Меню --- */
+#menu{
+	display: block;
+	width: 100%;
+	height: 50px;
+}
+.menu-wrapper{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	box-shadow: 0 0 4px #00FFD2;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+.menu-sub{
+	display: flex;
+	justify-content: center;
+}
+.menu-button{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;	
+	margin: 5px 10px;
+	font-size: 20px;
+}
+.menu-button:hover{
+	background-color: #CFF3F0;
+}
+.menu-input{
+	display: block;
+	width: 232px;
+	height: 40px;
+	margin: 5px 10px;
+	position: relative;
+	border-radius: 3px;
+	border: 2px solid #97FFEC;
+	overflow: hidden;
+}
+.menu-input input{
+	display: block;
+	width: calc(100% - 36px);
+	height: 100%;
+	padding: 0 10px;
+	font-size: 17px;
+}
+.menu-input .input-button{
+	display: block;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 18px;
+}
+.menu-input:hover .input-button,
+.menu-input input:focus ~ .input-button{
+	background-color: #CFF3F0;
+}
+.menu-imbtn{
+	display: flex;
+	width: 165px;
+	height: 50px;
+	overflow: hidden;
+	background-color: #CFF3F0;
+}
+.menu-imbtn .image-place{
+	display: block;
+	min-width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin: 5px 10px;
+	background-image: url('../../images/profile.jpg');
+}
+.menu-imbtn .text-place{
+	display: block;
+	width: calc(100% - 60px);
+	height: 100%;
+	padding-top: 14px;
+}
+.menu-button.active{
+	background-color: #CFF3F0;
+}
+/* --- Адаптивка 656-420-360-330px ---*/
+@media screen and (max-width: 656px) {
+	.menu-input{
+		display: none;
+	}
+}
+@media screen and (max-width: 420px) {
+	#open-online{
+		display: none;
+	}
+	.menu-imbtn{
+		background-color: transparent;
+	}
+}
+@media screen and (max-width: 360px) {
+	.menu-item .menu-button{
+		margin: 5px;
+	}
+	.menu-item .image-place{
+		margin-left: 5px;
+	}	
+}
+@media screen and (max-width: 330px) {
+	.menu-left .menu-sub .menu-item:nth-child(2){
+		display: none;
+	}	
+}

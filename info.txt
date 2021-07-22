@@ -1,0 +1,19 @@
+colors
+	#fff
+	#00FFD2
+	#0DBFA0
+	#CFF3F0
+	#0B7D72
+	#97FFEC
+	#28D0C5
+	#212E40
+	#182231
+	#E24242
+
+    background-color: #b6c1d1;
+    background-image: linear-gradient(to right,rgb(193, 212, 197) 0%,rgb(171, 173, 220) 100%);
+
+    background-color: rgba(17, 23, 32, 0.1);
+    background-image: linear-gradient(to bottom,rgba(33, 46, 64, .8) 0%,rgba(0, 0, 0, 0) 100%);
+
+Проверка на пустоту и содержание html при записе таблицы: create_table.php 7

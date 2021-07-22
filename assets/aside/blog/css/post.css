@@ -1,0 +1,115 @@
+#post-view .pv-actions{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5px;
+	border-top: 1px dashed #28D0C5;
+}
+#post-view .pva-item{
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	margin: 5px;
+	cursor: pointer;
+	background-color: #CFF3F0;
+}
+#post-view .pva-item:hover{
+	background-color: #b6c1d1;
+    background-image: linear-gradient(to right,rgb(193, 212, 197) 0%,rgb(171, 173, 220) 100%);
+}
+#post-view .pv-wrapper,
+#post-view .pv-title,
+#post-view .pv-content,
+#post-view .image{
+	display: block;
+	width: 100%;
+}
+#post-view{
+	display: none;
+	width: 100%;
+}
+#post-view.active{
+	display: block;
+}
+#post-view .pv-title{
+	background-color: #212E40;
+	padding: 20px;
+	color: #CFF3F0;
+	text-align: center;
+}
+#post-view .pv-title .text-place{
+	padding-bottom: 5px;
+}
+#post-view .pv-title .text-place h1{
+	font-size: 25px;
+}
+#post-view .pv-title .date-place{
+	color: #97FFEC;
+	font-weight: bold;
+	font-size: 19px;
+	padding-top: 5px;
+}
+#post-view .pv-content{
+	padding-top: 10px;
+}
+#post-view .image{
+	padding: 20px;
+	text-align: center;
+}
+#post-view .image img{
+	max-width: 100%;
+}
+#post-view .head,
+#post-view .text,
+#post-view .note,
+#post-view .list{	
+	word-spacing: 4px;
+}
+#post-view .head{
+	font-size: 20px;
+	padding: 5px 25px;
+	line-height: 39px;
+}
+#post-view .text,
+#post-view .list{
+	font-size: 18px;
+	line-height: 27px;
+	padding: 5px 30px;
+}
+#post-view .note{
+	display: block;
+	background-color: #CFF3F0;
+	border-left: 3px solid #28D0C5;
+	font-size: 19px;
+	line-height: 29px;
+	margin: 10px 30px;
+	padding: 10px 15px;
+}
+#post-view .list{
+	display: block;
+	margin: 0 30px;
+	padding: 10px 20px;
+	list-style-position: inside;
+	list-style-type: circle;
+}
+#post-view .image ~ .list{
+	margin-top: 0;
+	padding-top: 0;
+}
+@media screen and (max-width: 400px){
+	#post-view .image{
+		padding: 15px;
+	}
+	#post-view .head{
+		padding: 5px 15px;
+	}
+	#post-view .text{
+		padding: 5px 20px;
+	}
+	#post-view .note,
+	#post-view .list{
+		margin: 10px 20px;
+	}
+}

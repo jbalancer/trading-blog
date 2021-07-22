@@ -1,0 +1,103 @@
+#user-edit,
+#user-edit .ue-wrapper{
+	display: block;
+	width: 100%;
+}
+#user-edit{
+	display: none;
+	margin: 20px 0;
+}
+#user-edit.active{
+	display: block;
+}
+#user-edit .ue-content{
+	display: block;
+	width: 100%;
+}
+#user-edit .ue-item{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 450px;
+	max-width: 90%;
+	margin: 10px auto;
+}
+#user-edit .ue-item .title{
+	display: block;
+	width: 170px;
+	padding: 8px 12px;
+	font-size: 18px;
+}
+#user-edit .input-place{
+	display: block;
+	width: 250px;
+	max-width: 90%;
+	margin: 0 10px 0 20px;
+}
+#user-edit .input-place > input,
+#user-edit .input-place > textarea{
+	display: block;
+	width: 100%;
+	height: 35px;
+	font-size: 17px;
+	padding: 9px;
+	outline: none;
+	border-radius: 3px;
+	border: 1px solid #97FFEC;
+}
+#user-edit .input-place > input:hover,
+#user-edit .input-place > input:focus,
+#user-edit .input-place > textarea:hover,
+#user-edit .input-place > textarea:focus{
+	border-color: #28D0C5;
+	box-shadow: 0 1px 2px #97FFEC;
+}
+#user-edit .input-place > textarea{
+	height: 115px;
+	resize: none;
+}
+#user-edit .checkboxes{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+#user-edit .check-place{
+	display: block;
+	margin: 5px;
+	padding: 5px;
+}
+#user-edit .check-place .checkbox{
+	margin: 0 auto;
+}
+#user-edit .check-place .text{
+	display: inline-block;
+	margin-top: 5px;
+}
+.ue-btns{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 10px;
+}
+.btn-item{
+	display: block;
+	margin: 10px;
+	padding: 8px 12px;
+	text-align: center;
+	border-radius: 30px;
+	cursor: pointer;
+	background-color: #b6c1d1;
+    background-image: linear-gradient(to right,rgb(193, 212, 197) 0%,rgb(171, 173, 220) 100%);
+}
+.btn-item .text{
+	font-size: 18px;
+}
+.btn-item .text::selection{
+	background-color: transparent;
+}
+@media screen and (max-width: 541px) {
+	#user-edit .ue-wrapper .ue-content .ue-item{
+		width: 280px;
+	}
+}

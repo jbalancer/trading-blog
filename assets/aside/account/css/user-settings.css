@@ -1,0 +1,108 @@
+#user-settings{
+	display: none;
+	width: 100%;
+	margin: 20px 0;
+}
+#user-settings .us-wrapper,
+#user-settings .us-content{
+	display: block;
+	width: 100%;
+}
+#user-settings.active{
+	display: block;
+}
+#user-settings .usc-item{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 420px;
+	max-width: 90%;
+	margin: 10px auto;
+}
+#user-settings .usc-item .text-place{
+	display: block;
+	padding: 9px 13px;
+	border-right: 1px solid #CFF3F0;
+	width: calc(100% - 95px);
+}
+#user-settings .usc-item .checkbox{
+	margin: 10px;
+}
+#user-settings .usc-item .icon-place{
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	margin-right: 0;
+	border-radius: 100%;
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+#user-settings .usc-item .icon-place i{
+	font-size: 18px;
+}
+#user-settings .usc-item .icon-place:hover{
+	border-color: #0DBFA0;
+}
+#user-settings .separator{
+	display: block;
+	width: 400px;
+	max-width: 85%;
+	height: 1px;
+	background-color: #97FFEC;
+	margin: 0 auto;
+}
+#user-settings .usc-title{
+	display: block;
+	width: 440px;
+	max-width: calc(90% + 20px);
+	padding: 7px 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+#user-settings .usc-title .text{
+	font-weight: bold;
+	font-size: 19px;
+}
+#user-settings .usc-item.input-on .text-place{
+	border-right: none;
+}
+#user-settings .usc-item .input-place{
+	display: block;
+	width: 55px;
+	height: 30px;
+	overflow: hidden;
+}
+#user-settings .usc-item .input-place input{
+	display: block;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	background-color: #CFF3F0;
+	font-size: 16px;
+	border-radius: 3px;
+	padding: 7px;
+	border: 1px solid transparent;
+}
+#user-settings .usc-item .input-place input:hover,
+#user-settings .usc-item .input-place input:focus{
+	border-color: #28D0C5;
+}
+@media screen and (max-width: 399px) {
+	#user-settings .us-wrapper .us-content .usc-title{
+		width: 100%;
+		max-width: 100%;
+	}
+	#user-settings .us-wrapper .us-content .usc-item{
+		width: 95%;
+		max-width: 95%;
+	}
+	#user-settings .us-wrapper .us-content .usc-item .icon-place{
+		margin: 10px 0; 
+	}
+	#user-settings .us-wrapper .us-content .usc-item .text-place{
+		padding: 9px;
+		width: calc(100% - 85px);
+	}
+}

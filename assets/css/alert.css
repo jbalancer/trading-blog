@@ -1,0 +1,120 @@
+#alert-msg{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+}
+#alert-msg.active{
+	display: block;
+}
+.alert-wrapper{
+	display: block;
+	width: 25%;
+	min-width: 400px;
+	margin: 10px auto;
+	background-color: #212E40;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #182231;
+}
+.alert-title{
+	display: block;
+	width: 100%;
+	height: 90px;
+	padding: 20px 0;
+}
+.alert-icon{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+.alert-icon i{
+	display: none;
+	font-size: 44px;
+	color: #0DBFA0;
+}
+#alert-msg.question .alert-icon i.icon-question{
+	display: inline;
+}
+#alert-msg.info .alert-icon i.icon-info{
+	display: inline;
+}
+#alert-msg.ban .alert-icon i.icon-ban{
+	display: inline;
+}
+.alert-content{
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+	word-spacing: 5px;
+	line-height: 26px;	
+	color: #CFF3F0;
+	border-top: 1px solid #182231;
+	border-bottom: 1px solid #182231;
+}
+.alert-content,
+.alert-btn-item .btn-text{
+	font-size: 18px;
+}
+.alert-buttons{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;	
+}
+.alert-btn-item .btn-text{
+	color: #97FFEC;
+}
+.alert-btn-item .btn-text::selection{
+	background-color: transparent;
+}
+.alert-btn-item{
+	display: block;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #182231;
+	background-color: #182231;
+	padding: 7px 14px;
+	margin: 10px;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+.alert-btn-item:hover{
+	border-color: #0B7D72;
+	box-shadow: none;
+}
+#alert-msg .input-place{
+	display: none;
+	width: 90%;
+	height: 40px;
+	border-radius: 3px;
+	overflow: hidden;
+	margin: 10px auto;
+}
+#alert-msg .input-place input{
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	font-size: 17px;
+	color: #97FFEC;
+	outline: none;
+	background-color: #182231;
+	border: 2px solid transparent;
+}
+#alert-msg .input-place input::placeholder{
+	color: #0DBFA0;
+}
+#alert-msg .input-place input:hover,
+#alert-msg .input-place input:focus{
+	border-color: #0B7D72;
+}
+#alert-msg.input-on .input-place{
+	display: block;
+}
+@media screen and (max-width: 430px) {
+	.alert-wrapper{
+		min-width: 90%;
+	}
+}
