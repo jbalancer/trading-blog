@@ -1,1 +1,2 @@
 # trading-blog
+training project
